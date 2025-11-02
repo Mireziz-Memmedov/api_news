@@ -27,7 +27,7 @@ def get_news():
         url = f"https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey={API_KEY}"
         responce = requests.get(url)
         data = responce.json()
-        news = data.get("news", [])
+        news = data.get("articles", [])
     except Exception as e:
         news = {"error": str(e)}
 
