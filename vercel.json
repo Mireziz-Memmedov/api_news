@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    { "source": "/api/news", "destination": "/api/index" }
+    {
+      "source": "/(.*)",
+      "destination": "api/index"
+    }
   ]
 }
